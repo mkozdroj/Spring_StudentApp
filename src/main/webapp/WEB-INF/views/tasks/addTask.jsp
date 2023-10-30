@@ -90,24 +90,22 @@
                                 <div class="card-header py-3">
 
 
-                                    <%-- -%>
+
                                     <div class="form-group row">
                                         <label for="firstName" class="col-2 col-form-label">Wybierz kursanta</label>
                                         <div class="col-10">
-                                            <select class="form-control" id="sel1">
+                                            <select class="form-control" name="studentModel">
                                                 <option hidden>wybierz</option>
                                                 <c:forEach items="${studentModel}" var="student">
-                                                    <option>
-                                                        <c:out value="${student.firstName} + ${student.lastName}"/>
-                                                    </option>
+                                                    <option value="${student.id}">${student.firstName} ${student.lastName}</option>
                                                 </c:forEach>
                                             </select>
                                         </div>
                                     </div>
---%>
 
 
-                                    <div class="form-group row">
+
+<%--                                    <div class="form-group row">
     <label for="firstName" class="col-2 col-form-label">Wybierz kursanta</label>
     <div class="col-10">
   <select class="form-control" id="sel1">
@@ -117,14 +115,14 @@
     <option>kursant3</option>
   </select>
     </div>
-</div>                     
+</div>     --%>
                                    
                                    
                                    
                                     <div class="form-group row">
                                         <label class="col-2 col-form-label">Deadline</label>
                                         <div class="col-10">
-                                            <input class="form-control" type="date" placeholder="">
+                                            <input class="form-control" type="date" name="deadline" placeholder="">
                                         </div>
                             </div>
                           
@@ -132,7 +130,7 @@
                             <div class="form-group row">
                                 <label class="col-2 col-form-label">Tresć zadania:</label>
                                 <div class="col-10">
-                                <textarea class="form-control" rows="5" placeholder="tutaj opisz zadanie..."></textarea>
+                                <textarea class="form-control" rows="5" name="description" placeholder="tutaj opisz zadanie..."></textarea>
                                 </div>
                             </div>
 
@@ -151,23 +149,23 @@
                                     <div class="col-md-9 col-sm-9 col-xs-9">
                                     <div class="row">
                                     <div class="col-sm-2">
-                                    <label class="radio-inline"><input type="radio" value="success" checked>
+                                    <label class="radio-inline"><input type="radio" name="color" value="success">
                                     <i class="btn btn-success btn-circle btn-sm"></i> poziom junior</label>
                                     </div>
                                     <div class="col-sm-2">
-                                    <label class="radio-inline"><input type="radio" value="info" checked>
+                                    <label class="radio-inline"><input type="radio" name="color" value="info" >
                                     <i class="btn btn-info btn-circle btn-sm"></i> poziom junior+</label>
                                     </div>
                                     <div class="col-sm-2">
-                                    <label class="radio-inline"><input type="radio" value="secondary" checked>
+                                    <label class="radio-inline"><input type="radio" name="color" value="secondary" >
                                     <i class="btn btn-secondary btn-circle btn-sm"></i> poziom mid</label>
                                     </div>
                                     <div class="col-sm-2">
-                                    <label class="radio-inline"><input type="radio" value="primary" checked>
+                                    <label class="radio-inline"><input type="radio" name="color" value="primary">
                                     <i class="btn btn-primary btn-circle btn-sm"></i> poziom mid+</label>
                                     </div>
                                     <div class="col-sm-2">
-                                        <label class="radio-inline"><input type="radio" value="danger" checked>
+                                        <label class="radio-inline"><input type="radio" name="color" value="danger">
                                             <i class="btn btn-danger btn-circle btn-sm"></i> poziom senior</label>
                                     </div>
 
