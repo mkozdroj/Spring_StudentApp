@@ -17,12 +17,18 @@ import org.springframework.web.servlet.view.RedirectView;
 import java.util.List;
 
 @Controller
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 @Slf4j
 
 public class TaskController {
-private final TaskService taskService;
+    private final TaskService taskService;
 private final StudentService studentService;
+
+    public TaskController(TaskService taskService, StudentService studentService) {
+        this.taskService = taskService;
+        this.studentService = studentService;
+    }
+
 
     @GetMapping("/tasks")
     public String getTaskList(Model model) {
@@ -67,9 +73,6 @@ private final StudentService studentService;
 
     @PostMapping("/delTask/{id}")
     public RedirectView delTask(@PathVariable("id") Long id) {
-        //Model model
-        //List<StudentModel> studentList = studentService.getStudentList();
-       // model.addAttribute("studentModel", studentList);
         taskService.delTask(id);
         return new RedirectView("/tasks");
     }

@@ -12,20 +12,23 @@ import java.util.Date;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 @Slf4j
 public class TaskService {
 
     private final TaskRepository taskRepository;
 
+    public TaskService(TaskRepository taskRepository) {
+        this.taskRepository = taskRepository;
+    }
+
     public void addTask(TaskModel task) {
         task.setCreationDate(new Date());
-        log.info("Zapisuje taska: {}" , task);
         taskRepository.save(task);
 
     }
 
-    public List<TaskModel> getTaskList(){
+    public List<TaskModel> getTaskList() {
         return taskRepository.findAll();
     }
 
@@ -36,11 +39,13 @@ public class TaskService {
     public void saveEditTask(TaskModel editTask) {
 
         editTask.setCreationDate(getTaskById(editTask.getId()).getCreationDate());
-       // editTask.setCreationDate(editTask.getCreationDate());
-        System.out.println("SOUT: " +editTask.getCreationDate());
-        if (editTask.getStudentModel() == getTaskById(editTask.getId()).getStudentModel()){
-            editTask.setStudentModel( getTaskById(editTask.getId()).getStudentModel());
-        }
+        // editTask.setCreationDate(editTask.getCreationDate());
+
+        System.out.println("SOUT: " + editTask.getCreationDate());
+
+        //    if (editTask.getStudentModel() == getTaskById(editTask.getId()).getStudentModel()){
+        //       editTask.setStudentModel( getTaskById(editTask.getId()).getStudentModel());
+        //   }
         taskRepository.save(editTask);
     }
 

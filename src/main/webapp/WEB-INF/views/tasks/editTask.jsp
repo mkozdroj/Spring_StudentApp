@@ -94,8 +94,8 @@
                                     <div class="form-group row">
                                         <label for="firstName" class="col-2 col-form-label">Wybierz kursanta</label>
                                         <div class="col-10">
-                                            <select class="form-control" name="studentModel" value="${task.studentModel.firstName} ${task.studentModel.firstName}">
-                                                <option hidden>${task.studentModel.firstName} ${task.studentModel.lastName}</option>
+                                            <select class="form-control" name="studentModel" value="${task.studentModel.id}">
+                                                <%--<option hidden>Edytuj Studenta (${task.studentModel.firstName} ${task.studentModel.lastName})</option>--%>
                                                 <c:forEach items="${studentModel}" var="student">
                                                     <option value="${student.id}">${student.firstName} ${student.lastName}</option>
                                                 </c:forEach>
