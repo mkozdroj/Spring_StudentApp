@@ -37,15 +37,7 @@ public class TaskService {
     }
 
     public void saveEditTask(TaskModel editTask) {
-
-        editTask.setCreationDate(getTaskById(editTask.getId()).getCreationDate());
-        // editTask.setCreationDate(editTask.getCreationDate());
-
-        System.out.println("SOUT: " + editTask.getCreationDate());
-
-        //    if (editTask.getStudentModel() == getTaskById(editTask.getId()).getStudentModel()){
-        //       editTask.setStudentModel( getTaskById(editTask.getId()).getStudentModel());
-        //   }
+        //editTask.setCreationDate(getTaskById(editTask.getId()).getCreationDate());
         taskRepository.save(editTask);
     }
 
