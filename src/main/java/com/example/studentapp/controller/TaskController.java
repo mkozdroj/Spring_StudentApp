@@ -5,7 +5,6 @@ import com.example.studentapp.model.StudentModel;
 import com.example.studentapp.model.TaskModel;
 import com.example.studentapp.service.StudentService;
 import com.example.studentapp.service.TaskService;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,7 +22,7 @@ import java.util.List;
 
 public class TaskController {
     private final TaskService taskService;
-private final StudentService studentService;
+    private final StudentService studentService;
 
     public TaskController(TaskService taskService, StudentService studentService) {
         this.taskService = taskService;

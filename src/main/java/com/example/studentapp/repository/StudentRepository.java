@@ -7,8 +7,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface StudentRepository extends JpaRepository<StudentModel, Long> {
 
-    // TODO metody, query
-
-
-
 }
