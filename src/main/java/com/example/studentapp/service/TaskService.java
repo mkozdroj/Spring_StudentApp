@@ -37,7 +37,6 @@ public class TaskService {
     }
 
     public void saveEditTask(TaskModel editTask) {
-        //editTask.setCreationDate(getTaskById(editTask.getId()).getCreationDate());
         taskRepository.save(editTask);
     }
 
