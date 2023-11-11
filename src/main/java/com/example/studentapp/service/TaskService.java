@@ -12,7 +12,6 @@ import java.util.Date;
 import java.util.List;
 
 @Service
-//@RequiredArgsConstructor
 @Slf4j
 public class TaskService {
 
@@ -25,7 +24,6 @@ public class TaskService {
     public void addTask(TaskModel task) {
         task.setCreationDate(new Date());
         taskRepository.save(task);
-
     }
 
     public List<TaskModel> getTaskList() {

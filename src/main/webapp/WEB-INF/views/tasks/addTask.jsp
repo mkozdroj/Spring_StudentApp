@@ -1,6 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@page contentType="text/html; charset=UTF-8" %>
+<jsp:useBean id="now" class="java.util.Date"/>
 <%@include file="../dynamic/css.jspf"%>
 
 <body id="page-top">
@@ -92,9 +93,9 @@
 
 
                                     <div class="form-group row">
-                                        <label for="firstName" class="col-2 col-form-label">Wybierz kursanta</label>
+                                        <label class="col-2 col-form-label">Wybierz kursanta</label>
                                         <div class="col-10">
-                                            <select class="form-control" name="studentModel">
+                                            <select class="form-control" name="studentModel.id">
                                                 <option hidden>wybierz</option>
                                                 <c:forEach items="${studentModel}" var="student">
                                                     <option value="${student.id}">${student.firstName} ${student.lastName}</option>
@@ -103,26 +104,13 @@
                                         </div>
                                     </div>
 
-
-
-<%--                                    <div class="form-group row">
-    <label for="firstName" class="col-2 col-form-label">Wybierz kursanta</label>
-    <div class="col-10">
-  <select class="form-control" id="sel1">
-    <option hidden>wybierz</option>
-    <option>kursant1</option>
-    <option>kursant2</option>
-    <option>kursant3</option>
-  </select>
-    </div>
-</div>     --%>
-                                   
                                    
                                    
                                     <div class="form-group row">
                                         <label class="col-2 col-form-label">Deadline</label>
                                         <div class="col-10">
-                                            <input class="form-control" type="date" name="deadline" placeholder="">
+                                            <input class="form-control" type="date" name="deadline" max="3000-12-31"
+                                            min="<fmt:formatDate pattern = "yyyy-MM-dd"  value="${now}" />">
                                         </div>
                             </div>
                           
