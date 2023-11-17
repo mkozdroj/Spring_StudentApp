@@ -30,7 +30,5 @@ public class StudentModel {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "studentModel")
     private List<TaskModel> taskModel = new ArrayList<>();
-    //private Set<TaskModel> taskModel = new HashSet<>();
-
 
 }
