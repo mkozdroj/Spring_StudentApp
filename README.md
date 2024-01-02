@@ -1,6 +1,6 @@
 # Spring_StudentApp :mortar_board:
 
-> CRUD application for managing students and their tasks.
+> Simple CRUD application for managing students and their tasks.
 > Project developed during the Go for Java Girl bootcamp classes.
 
 
@@ -8,8 +8,6 @@
 * [General Information](#general-information)
 * [Technologies Used](#technologies-used)
 * [Screenshots](#screenshots)
-* [Setup](#setup)
-* [Acknowledgements](#acknowledgements)
 
 ## General information
 The application has such functionalities:
