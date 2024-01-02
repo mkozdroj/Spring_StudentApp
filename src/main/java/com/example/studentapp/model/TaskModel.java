@@ -1,7 +1,5 @@
 package com.example.studentapp.model;
-
 import lombok.Data;
-import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
 

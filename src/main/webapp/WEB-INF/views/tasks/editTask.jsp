@@ -83,7 +83,6 @@
             <!-- End of Topbar -->
 
 
-
             <!-- Begin Page Content -->
             <div class="container-fluid">
                 <form method="post" action='<c:url value="/editTask/${task.id}"/>'>
@@ -151,7 +150,8 @@
                                         </div>
                                         <div class="col-sm-2">
                                             <label class="radio-inline">
-                                                <input type="radio" ${task.color.equals("info") ? 'checked' : ''} name="color"
+                                                <input type="radio" ${task.color.equals("info") ? 'checked' : ''}
+                                                       name="color"
                                                        value="info">
                                                 <i class="btn btn-info btn-circle btn-sm"></i> poziom junior+</label>
                                         </div>

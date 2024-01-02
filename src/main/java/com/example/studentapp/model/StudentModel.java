@@ -1,9 +1,6 @@
 package com.example.studentapp.model;
 
-
-
 import lombok.Data;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;

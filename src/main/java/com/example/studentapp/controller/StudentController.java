@@ -20,7 +20,6 @@ public class StudentController {
 
     private final StudentService studentService;
 
-
     @GetMapping("/students")
     public String getStudentList(Model model) {
         List<StudentModel> studentList = studentService.getStudentList();

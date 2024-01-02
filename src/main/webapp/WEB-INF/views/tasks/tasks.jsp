@@ -149,7 +149,7 @@
                                             <strong>Deadline:</strong> ${task.deadline}</div>
                                             ${task.description}
                                         <div>
-                                        <a href='<c:url value="/editTask/${task.id}"/>'
+                                            <a href='<c:url value="/editTask/${task.id}"/>'
                                                class="btn-right btn btn-primary" role="button">Edytuj</a>
 
 

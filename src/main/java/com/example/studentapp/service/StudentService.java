@@ -4,7 +4,6 @@ import com.example.studentapp.model.StudentModel;
 import com.example.studentapp.repository.StudentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -20,7 +19,6 @@ public class StudentService {
     public List<StudentModel> getStudentList() {
         return studentRepository.findAll();
     }
-
 
     public StudentModel getStudentById(Long id) {
         return studentRepository.findById(id).orElse(null);
