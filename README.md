@@ -2,6 +2,7 @@
 
 > Simple CRUD application for managing students and their tasks.
 > Project developed during the Go for Java Girl bootcamp classes.
+> The project was created based on provided JSP views.
 
 
 ## Table of Contents
